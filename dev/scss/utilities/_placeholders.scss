@@ -1,0 +1,21 @@
+// Covering Background Images
+%bg-image {
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include vendor-prefix(background-size, cover);
+}
+
+// Clear list
+%list-none {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Hiding text under the div
+%hide-text {
+    overflow: hidden;
+    text-indent: -9000px;
+    display: block;
+}

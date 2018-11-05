@@ -1,0 +1,26 @@
+
+.btn{
+  color: #f9f9f9;
+  padding: 1.8rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size:1.8rem;
+  transition: all .5s ease-in-out;
+  border-radius: 0px;
+
+  &--main{
+    background:$color-brand;
+    &:hover{
+      background: darken($color-brand, 20%);
+      color: #f9f9f9;
+    }
+  }
+  &--dark{
+    background:$color-dark;
+    &:hover{
+      background: darken($color-dark, 20%);
+      color: #f9f9f9;
+    }
+  }
+}

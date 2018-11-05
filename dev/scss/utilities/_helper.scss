@@ -1,0 +1,39 @@
+.#{$global} {
+    &-content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.box {
+    &-block {
+        display: block;
+    }
+    &-inline-block {
+        display: inline-block;
+        &--top {
+            vertical-align: top;
+        }
+        &--middle {
+            vertical-align: middle;
+        }
+        &--bottom {
+            vertical-align: bottom;
+        }
+    }
+}
+
+.truncate {
+    &--1-line {
+        @include ellipsis(20px, 1);
+    }
+    &--1-2-line {
+        @include ellipsis(25px, 1);
+    }
+    &--2-line {
+        @include ellipsis(50px, 2);
+    }
+    &--3-line {
+        @include ellipsis(70px, 3);
+    }
+}

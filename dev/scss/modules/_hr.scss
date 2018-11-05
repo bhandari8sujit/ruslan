@@ -1,0 +1,14 @@
+.hr{
+  margin-top: 1rem; 
+  width: 6.5rem;
+  height: 0.2rem;
+  display: inline-block;
+
+  &--white{
+    background-color: #e0e0e0;
+  }
+
+  &--brand{
+    background-color: #0055b8;
+  }
+}

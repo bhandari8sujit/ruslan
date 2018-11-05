@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+@font-face {
+  font-family: "Altair";
+  src: url("../fonts/altair-bold_trial-webfont.woff2") format("woff2"),
+    url("../fonts/altair-bold_trial-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Altair Light";
+  src: url("../fonts/altair-thin_trial-webfont.woff2") format("woff2"),
+    url("../fonts/altair-thin_trial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$base-font: "Roboto", Helvetica, Arial, sans-serif;
+$header-font: "Altair", Helvetica, Arial, sans-serif;
+
+body {
+  @include font-smoothing(on);
+  font-family: $base-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px;
+  font-family: $header-font;
+  line-height: 30px;
+}
+
+p {
+  line-height: 30px;
+  font-family: $base-font;
+  font-size: 1.6rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Community-Home-Stay";
+  src: url("../fonts/Community-Home-Stay.eot?ds43");
+  src: url("../fonts/Community-Home-Stay.eot?ds43#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Community-Home-Stay.ttf?ds43") format("truetype"),
+    url("../fonts/Community-Home-Stay.woff?ds43") format("woff"),
+    url("../fonts/Community-Home-Stay.svg?ds43#Community-Home-Stay")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="chs-"],
+[class*=" chs-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Community-Home-Stay" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.chs-chs-arrow-down:before {
+  content: "\e900";
+}
+.chs-chs-arrow-right-thin:before {
+  content: "\e901";
+}
+.chs-chs-book:before {
+  content: "\e902";
+}
+.chs-chs-calendar:before {
+  content: "\e903";
+}
+.chs-chs-check-circle:before {
+  content: "\e904";
+}
+.chs-chs-close:before {
+  content: "\e905";
+}
+.chs-chs-cycling:before {
+  content: "\e906";
+}
+.chs-chs-hiking:before {
+  content: "\e907";
+}
+.chs-chs-info:before {
+  content: "\e908";
+}
+.chs-chs-location:before {
+  content: "\e909";
+}
+.chs-chs-map-location:before {
+  content: "\e90a";
+}
+.chs-chs-map:before {
+  content: "\e90b";
+}
+.chs-chs-pager-left:before {
+  content: "\e90c";
+}
+.chs-chs-pager-right:before {
+  content: "\e90d";
+}
+.chs-chs-price-tag:before {
+  content: "\e90e";
+}
+.chs-chs-quote-left:before {
+  content: "\e90f";
+}
+.chs-chs-traveller:before {
+  content: "\e910";
+}
+.chs-chs-vehicle:before {
+  content: "\e911";
+}
+.chs-chs-car:before {
+  content: "\e912";
+}
+.chs-chs-plane:before {
+  content: "\e913";
+}
+.chs-chs-motor-bike:before {
+  content: "\e914";
+}
+
+.chs-chs-smoking:before {
+  content: "\e915";
+}
+.chs-chs-wifi:before {
+  content: "\e916";
+}
+.chs-chs-towel:before {
+  content: "\e917";
+}
+.chs-chs-toilet:before {
+  content: "\e918";
+}
+.chs-chs-toilet-paper:before {
+  content: "\e919";
+}
+.chs-chs-laundry:before {
+  content: "\e91a";
+}
+.chs-chs-first-aid:before {
+  content: "\e91b";
+}
+.chs-chs-chat:before {
+  content: "\e91c";
+}
+.chs-chs-ceiling-fan:before {
+  content: "\e91d";
+}
+.chs-chs-water:before {
+  content: "\e91e";
+}
+.chs-chs-shower:before {
+  content: "\e91f";
+}
+.chs-chs-private-bathroom:before {
+  content: "\e920";
+}
+.chs-chs-electricity:before {
+  content: "\e921";
+}
+.chs-chs-drinking:before {
+  content: "\e922";
+}
+.chs-chs-avatar:before {
+  content: "\e923";
+}
+.chs-chs-attached-bathroom:before {
+  content: "\e924";
+}
+
+.chs-chs-socket:before {
+  content: "\e925";
+}

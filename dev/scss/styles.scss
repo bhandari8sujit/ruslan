@@ -1,0 +1,50 @@
+ @import'vendors/bootstrap/bootstrap',
+        //'arabic/bootstrap-rtl',
+        'vendors/pvt-icons/pvt-icons';
+
+ @import "utilities/path",
+         "utilities/functions",
+         "utilities/vars",
+         "utilities/mixins",
+         "utilities/placeholders",
+         "utilities/gutter",
+         "utilities/helper",
+         "utilities/responsive";
+
+ @import "base/config",
+         "base/units",
+         "base/typo",
+         "base/branding";
+
+@import 'modules/button',
+        'modules/alert',
+        'modules/banner',
+        'modules/content',
+        'modules/jumbotron',
+        'modules/carousel',
+        'modules/forms',
+        'modules/media',
+        'modules/nano',
+        'modules/nav',
+        'modules/off-canvas',
+        'modules/dropdown',
+        'modules/calendy',
+        'modules/popup',
+        'modules/masonry',
+        'modules/loader',
+        'modules/social',
+        'modules/table',
+        'modules/tabpanel',
+        'modules/breadcrumb',
+        'modules/card',
+        'modules/thumbnails',
+        'modules/paginations',
+        'modules/pager',
+        'modules/modal',
+        'modules/additional-info',
+        'modules/hr',
+        'modules/list';
+
+@import "layout/header",
+        "layout/footer"
+

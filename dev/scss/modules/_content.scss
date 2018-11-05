@@ -1,0 +1,333 @@
+.content{
+  min-height: 100vh;
+  display: table;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  &--alt{
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-section{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &-title{    
+    letter-spacing: 3.5px;    
+    letter-spacing: 3.5px;
+    margin-bottom: 5rem;
+  }
+  &-desc{    
+    font-size: 1.5rem;    
+    line-height: 3rem;    
+    letter-spacing: 1.5px;
+
+    &--big{
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    &--medium{
+      font-size: 2.2rem;
+    }
+    &--small{
+      font-size: 2rem;      
+    }
+    &--xs{
+      font-size: 1.5rem;
+    }
+    &--light{
+      font-size: 300;
+    }
+  }
+  &--carousel{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+  }
+}
+
+.rs_navigation{
+  background: none;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  // justify-content: flex-start;  
+  align-items: center;
+  // background: #000;
+  width: 100%;
+  padding: 0 5rem;
+  transition: all .5s ease-in-out;
+
+  .nav-items{
+    padding-left: 4rem;
+    margin-bottom: 0;
+
+    li{
+      display: inline-flex;
+      margin: 1.5rem;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+  }
+  .header-social{    
+    margin-left: auto;
+    padding-left: 0;
+
+    li{
+      display: inline-block;
+      margin: 1.5rem;
+    }
+  }
+}
+
+.rs_story{
+  background-image: url('../images/bgcocktails.png');  
+  // background-blend-mode: multiply;
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &-logo{
+    position: absolute;
+    width: 65rem;
+    height: 65rem;
+    top: -8rem;
+    right: -9rem;
+    background-image: url('../images/brand-bg.png');  
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  &-bottle{
+    position: absolute;
+    width: 65rem;
+    height: 65rem;
+    bottom: -8rem;
+    right: -9rem;
+    
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.rs_products{
+  // background-image: url('../images/brand-bg.png');
+  background-color: #fff;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &--logo{
+    position: absolute;
+    width: 65rem;
+    height: 65rem;
+    top: -8rem;
+    left: -9rem;
+    background-image: url('../images/brand-bg.png');  
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+.rs_cocktails{
+  min-height: 100vh;
+
+  &-left{
+    display: inline-block;
+    width: 50%;
+    min-height: 100vh;
+    background-image: url('../images/brand-bg.png'), url('../images/bgcocktails.png');  
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    .rs_cocktails-big{
+      display: table-cell;
+      height: 100%;
+      height: 100%;
+      vertical-align: middle;
+      text-align: left;
+    }
+  }
+  &-right{
+    display: inline-block;
+    width: 50%;
+    min-height: 100vh;
+
+    .top{
+      width: 100%;
+      height: 50vh;
+      background: url('../images/cocktail-1.png');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: table;
+
+      span{
+        display: table-cell;
+        width: 100%;
+        text-align: left;
+        vertical-align: bottom;        
+        padding: 2.5rem;
+        font-weight: 300;
+      }
+    }
+    .bottom{
+      width: 100%;
+      height: 50vh;
+      background: url('../images/cocktail-2.jpeg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: table;
+      font-weight: 300;
+
+      span{
+        display: table-cell;
+        width: 100%;
+        vertical-align: bottom;
+        text-align: right;        
+        padding: 2.5rem;
+      }
+    }
+  }
+}
+
+.rs_parties{  
+  background-color: purple !important;
+  background-blend-mode: multiply !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  padding: 10% 0%;
+
+  &-left{
+    
+    text-align: right;
+    align-items: flex-end;
+    height: 100%;
+    flex-basis: 50%;
+    padding-right: 2rem;
+    
+  }
+  &-right{
+    
+    height: 350px;  
+    background-repeat: no-repeat !important;
+    flex-basis: 50%;
+  }
+}
+
+.rs_parties-content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+.rs_insta{
+  background-image: url('../images/drinks.jpg'), url('../images/12.png') !important;
+  background-color: rgba(255,255,255,.5) !important;
+  background-blend-mode: multiply !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  padding: 10% 15%;
+
+  &-content{
+    display: flex;
+    flex-basis: 50%;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .insta-img{
+      height: 300px;
+      flex-basis: 45%;
+      margin: 1.5rem;      
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      position: relative;
+      transition: all .5s ease-in-out;
+
+      &:hover .insta-overlay{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.rs_footer{
+  padding: 6rem;
+  background-image: url('../images/brand-bg.png');
+  background-color:#2A0070;
+  background-blend-mode: multiply;
+
+  span{
+    display: inline-block;
+    opacity: 0.75;    
+    font-family: "Altair";
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;    
+    letter-spacing: 3px;
+    padding-left: 1.5rem;  
+    align-items: center;
+    
+  }
+
+  &-row1{
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+  }
+  .footer-social{    
+    margin-left: auto;
+    padding-left: 0;
+
+    li{
+      display: inline-block;
+      margin: 1.5rem;
+    }
+  }
+
+  &-row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .footer-nav{
+      padding-left: 0;
+
+      li{
+        display: inline-flex;
+        margin:1rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &-row3{
+    opacity: 0.75;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+
+}
