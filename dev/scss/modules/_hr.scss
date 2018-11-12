@@ -1,8 +1,6 @@
-.hr{
-  margin-top: 1rem; 
+.hr{  
   width: 6.5rem;
-  height: 0.2rem;
-  display: inline-block;
+  height: 0.2rem;  
 
   &--white{
     background-color: #e0e0e0;
@@ -10,5 +8,15 @@
 
   &--brand{
     background-color: #0055b8;
+  }
+
+  &--left{
+    margin: 1rem auto 5rem 0;
+  }
+  &--right{
+    margin: 1rem 0 5rem auto;
+  }
+  &--center{
+    margin: 1rem auto 5rem auto;
   }
 }

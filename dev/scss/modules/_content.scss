@@ -2,8 +2,8 @@
   min-height: 100vh;
   display: table;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
 
   &--alt{
     display: block;
@@ -11,15 +11,22 @@
     padding-right: 0;
   }
 
+  &--flexCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &-section{
     display: table-cell;
     vertical-align: middle;
+    z-index: 9;
   }
 
   &-title{    
     letter-spacing: 3.5px;    
     letter-spacing: 3.5px;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
   }
   &-desc{    
     font-size: 1.5rem;    
@@ -50,22 +57,59 @@
   }
 }
 
+#bottleImg{
+  @include respond(tab-port){
+    height: 45rem;  
+    bottom: -3rem;
+    width: auto;
+    transform: none;
+  }  
+  @include respond(phone){
+    height: 35rem;
+  }
+  @include respond(phone-md){
+    height: 30rem;
+  }
+  @include respond(phone-sm){
+    height: 25rem;
+  }
+}
+#drinksGlass{
+  @include respond(tab-port){
+    height: 20rem;
+    bottom: -3rem;
+  }
+}
+
+
+
 .rs_navigation{
-  background: none;
+  // background: #000;
   position: fixed;
   top: 0;
   z-index: 9;
   display: flex;
   // justify-content: flex-start;  
-  align-items: center;
-  // background: #000;
+  align-items: center;  
   width: 100%;
   padding: 0 5rem;
   transition: all .5s ease-in-out;
 
+  @include respond(phone){
+    padding: 0 2.5rem;
+  }
+
+  &-logo{
+    width: 19rem;
+  }
+
   .nav-items{
     padding-left: 4rem;
     margin-bottom: 0;
+
+    @include respond(phone){
+      padding: 0 2.5rem;
+    }
 
     li{
       display: inline-flex;
@@ -92,30 +136,133 @@
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
+  overflow: hidden;
   position: relative;
+
+  @include respond(tab-port){
+    min-height: auto;
+    padding: 15% 5%;
+  }
 
   &-logo{
     position: absolute;
     width: 65rem;
     height: 65rem;
-    top: -8rem;
+    top: -20rem;
     right: -9rem;
     background-image: url('../images/brand-bg.png');  
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    z-index: 0;
+    opacity: .5;
   }
-  &-bottle{
+  &-bottle1{
     position: absolute;
-    width: 65rem;
-    height: 65rem;
-    bottom: -8rem;
-    right: -9rem;
-    
+    width: 25rem;
+    bottom: -40rem;
+    right: 19rem;
+    opacity: .4;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: 2;
+    overflow: hidden;
+    -webkit-transform: rotateY(-40deg);
+    transform: rotate(-30deg);
+
+    @include respond(tab-port){
+      right: 12rem;
+    }
+    @include respond(phone){
+      // right: 5rem;
+      display: none;
+    }
+  }
+  &-bottle2{
+    position: absolute;
+    width: 15rem;
+    bottom: -30rem;
+    right: 1rem;
+    opacity: .4;
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     z-index: 1;
+    overflow: hidden;
+    -webkit-transform: rotateY(-40deg);
+    transform: rotate(-32deg);
+
+    @include respond(tab-port){
+      right: 4rem;
+    }
+    @include respond(phone){
+      // right: 1rem;
+      display: none;
+    }
+  }
+}
+
+.rs_banner{
+  position: relative;
+
+  &-bottle1{
+    position: absolute;
+    right: 20rem;
+    z-index: 2;
+    bottom: -10rem;
+    height:65rem;
+    
+    @include respond(tab-port){
+      right: 12rem;      
+    }
+    @include respond(phone){
+      right: 8rem;      
+    }   
+    
+  }
+  &-glass1{
+    position: absolute;
+    right: 4rem;
+    z-index: 1;
+    bottom: -10rem;
+    height:35rem;
+    
+    @include respond(tab-port){
+      right: 3rem;      
+    }
+
+    @include respond(phone){
+      right: 1rem;      
+      width: 10rem;
+      height: auto !important;
+    }
+  }
+  &-glass2{
+    position: absolute;
+    right: 32rem;
+    z-index: 3;
+    bottom: -10rem;
+    height:26rem;
+
+    @include respond(tab-port){
+      right: 20rem;      
+    }
+
+    @include respond(phone){
+      right: 12rem;      
+      width: 10rem;
+      height: auto !important;
+    }
+  }
+  &-logo{
+    width: 43rem !important;
+    height: 38rem;
+    top: 50%;
+    z-index: 1;
+    right: 8rem;
+    opacity: .7;
+    transform: translateY(-50%);
   }
 }
 
@@ -127,6 +274,16 @@
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
+
+  @include respond(tab-port){
+    min-height: auto;
+    padding: 10% 10%;
+  }
+
+  @include respond(phone){
+    padding: 15% 5%;
+  }
 
   &--logo{
     position: absolute;
@@ -138,11 +295,58 @@
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    z-index: 1;
+    opacity: .5;
+
+    @include respond(phone){
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-bottle1{
+    position: absolute;    
+    height: 65rem;
+    bottom: -8rem;
+    left: 18rem; 
+    opacity: .8;       
+    z-index: 2;
+
+    @include respond(tab-port){
+      left: 15rem;
+    }
+    @include respond(phone){
+      left: 5rem;
+      opacity: .6;
+    }
+  }
+  &-bottle2{
+    position: absolute;    
+    height: 65rem;
+    bottom: -3rem;
+    left: 8rem;    
+    opacity: .8;      
+    z-index: 2;
+    
+    @include respond(phone){
+      left: 1rem;
+      opacity: .6;
+    }
   }
 }
 
 .rs_cocktails{
   min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  @include respond(tab-port){
+    min-height: auto;
+  }
+  @include respond(phone){
+    flex-direction: column;
+  }
 
   &-left{
     display: inline-block;
@@ -152,18 +356,28 @@
     background-blend-mode: multiply;
     background-size: cover;
 
-    .rs_cocktails-big{
-      display: table-cell;
-      height: 100%;
-      height: 100%;
-      vertical-align: middle;
-      text-align: left;
+    @include respond(phone){
+      width: 100%;
     }
+
+    // .rs_cocktails-big{
+    //   display: table-cell;
+    //   height: 100%;
+    //   height: 100%;
+    //   vertical-align: middle;
+    //   text-align: left;
+    // }
   }
   &-right{
-    display: inline-block;
+    // display: inline-block;
     width: 50%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone){
+      width: 100%;
+    }
 
     .top{
       width: 100%;
@@ -172,16 +386,20 @@
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      display: table;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      font-weight: 300;
+      padding: 2.5rem;
 
-      span{
-        display: table-cell;
-        width: 100%;
-        text-align: left;
-        vertical-align: bottom;        
-        padding: 2.5rem;
-        font-weight: 300;
-      }
+      // span{
+      //   display: table-cell;
+      //   width: 100%;
+      //   text-align: left;
+      //   vertical-align: bottom;        
+      //   padding: 2.5rem;
+      //   font-weight: 300;
+      // }
     }
     .bottom{
       width: 100%;
@@ -190,16 +408,20 @@
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      display: table;
+      // display: table;
       font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.5rem;
 
-      span{
-        display: table-cell;
-        width: 100%;
-        vertical-align: bottom;
-        text-align: right;        
-        padding: 2.5rem;
-      }
+      // span{
+      //   display: table-cell;
+      //   width: 100%;
+      //   vertical-align: bottom;
+      //   text-align: right;        
+      //   padding: 2.5rem;
+      // }
     }
   }
 }
@@ -210,22 +432,44 @@
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  padding: 10% 0%;
+  
 
-  &-left{
-    
+  @include respond(tab-port){
+    min-height: auto;
+  }
+
+  @include respond(phone){
+    padding: 15% 5%;
+  }
+
+  &-left{    
     text-align: right;
     align-items: flex-end;
     height: 100%;
     flex-basis: 50%;
     padding-right: 2rem;
+
+    @include respond(phone){
+      flex-basis: 100%;
+    }
     
   }
-  &-right{
-    
-    height: 350px;  
+  &-right{    
+    height: 35rem;  
     background-repeat: no-repeat !important;
     flex-basis: 50%;
+
+    @include respond(tab-port){
+      height: 25rem;
+    }
+
+    @include respond(phone){
+      flex-basis: 100%;
+      background-size: cover !important;
+      background-position: center center !important;
+      height: 35rem;
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -235,23 +479,72 @@
   align-items: flex-end;
   flex-wrap: wrap;
   flex-direction: row;
+
+  @include respond(phone){
+    padding-top: 0;
+  }
 }
 
 
 .rs_insta{
-  background-image: url('../images/drinks.jpg'), url('../images/12.png') !important;
-  background-color: rgba(255,255,255,.5) !important;
-  background-blend-mode: multiply !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  // background-image: url('../images/drinks.jpg'), url('../images/insta-overlay.png');
+  //background-color:silver;
+  // background-blend-mode: multiply;
+  // background-size: cover;
+  // background-position: center center;
+  // background-repeat: no-repeat;
   padding: 10% 15%;
+  position: relative;
+
+  .content{
+    z-index: 99;
+  }
+
+  &-flakes{
+    width: 97rem;
+    max-height: 55rem;
+    position: absolute;
+    top:0;
+    right: 0;
+    opacity: .7;
+    z-index:-1;
+  }
+  &-logo{
+    width: 54rem;    
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: .7;
+    z-index:-1;
+  }
+  &-drinks{
+    width: 100%;
+    max-height: 129rem;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    opacity: .7;
+    z-index:-1;
+  }
+  
+  @include respond(tab-port){
+    min-height: auto;
+  }
+
+  @include respond(phone){
+    padding: 15% 5%;
+  }
 
   &-content{
     display: flex;
     flex-basis: 50%;
     flex-flow: row wrap;
     justify-content: center;
+    z-index: 2;
+
+    @include respond(phone){
+      margin-top: 0 !important;
+    }
 
     .insta-img{
       height: 300px;
@@ -262,6 +555,14 @@
       background-repeat: no-repeat !important;
       position: relative;
       transition: all .5s ease-in-out;
+
+      @include respond(tab-port){
+        height:40rem;
+        flex-basis: 100%;
+      }
+      @include respond(tab-port){
+        margin: 1.5rem 0;
+      }
 
       &:hover .insta-overlay{
         opacity: 1;
@@ -294,10 +595,19 @@
     flex-direction: row;
     // justify-content: space-between;
     align-items: center;
+
+    @include respond(tab-port){
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   .footer-social{    
     margin-left: auto;
     padding-left: 0;
+
+    @include respond (tab-port){
+      margin-left: 0;
+    }
 
     li{
       display: inline-block;

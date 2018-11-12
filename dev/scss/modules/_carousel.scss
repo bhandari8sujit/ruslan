@@ -1,60 +1,129 @@
 
-#banner-carousel{
-  height: 85vh;
-}
-.carousel{
-  &-inner{
-    .item{
-      height: 85vh;
+.pv-carousel-4 {
+  width: 100%;
+  height: 89vh;
+  position: relative;
+  // top: 0;
+  z-index: 0;
+
+  &__indicators {
+    bottom: 8rem;
+    left: 15rem;
+    width: auto;
+    margin-left: auto;
+    text-align: left;
+
+    @include respond(phone){
+      left: 5%;
+    }
+    
+    li {
+      width: 3rem;
+      height: 0;
+      margin: 2px 5px;
+      border: 2px solid #f8f8f8;
+      opacity: .35;
+      text-indent: -9999px;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+
+      &.active {
+        width: 3rem;
+        height: 0;
+        margin: 2px 5px;
+        border: 2px solid #f8f8f8;
+        opacity: 1;
+      }
     }
   }
-  &-caption{
-    display: table;
+  &__carousel-inner {
     width: 100%;
     height: 100%;
-    left: 0%;
-    right: 0;
-    padding-bottom: 0;    
-    margin-left: 10%;
-
-    .border{
-      padding: 2rem;
-      padding-left: 3rem;
-      border-left: 2px solid #bdbdbd;
-      opacity: .75;
+    > .item {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition-property:opacity;
+      transition:all .7s ease-in-out;
+      
+      &:after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
     }
   }
-  &-indicators {
+  &__carousel-cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: 8rem;
-    left: 10%;
-    z-index: 15;
-    width: 60%;
-    margin-left: 0%;
-    padding-left: 0;
-    list-style: none;
-    text-align: left;
+    z-index: 3;
   }
-}
-#banner-carousel .carousel-indicators li {
-  width: 3rem;
-  height: 0;
-  border: 4px solid #f9f9f9;
-  opacity: 0.35;
-  margin: 5px;
-}
-#banner-carousel .carousel-indicators li.active {
-  border: 4px solid #fff;
-  background: #fff;
-  width: 3rem;
-  height: 0;
-  margin: 5px;
-}
+  &__carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    z-index: 99;
+    text-align: left;
+    margin-left: 15rem;
+    max-width: 45rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    border-left: 2px solid #bdbdbd;    
 
-#banner-carousel .carousel-inner>.item>img{  
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+    @include respond(phone){
+      margin-left: 5%;
+    }
+
+    h1{
+      opacity: 0.75;      
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;      
+      color: #bdbdbd;
+      letter-spacing: 3.5px;      
+      letter-spacing: 3.5px;
+    }
+    p{
+      opacity: 0.9;
+      color: #ffffff;      
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 30px;      
+      letter-spacing: 1.5px;
+    }
+  }
+  &__control {
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    .carousel-control {
+      background-image: none;
+      width: auto;
+      font-size: 35px;
+      text-shadow: 0 0 0;
+      transition: all 0.5s ease;
+    }
+    .left {
+      left: 30px;
+    }
+    .right {
+      right: 30px;
+    }
+  }
 }
 
 
@@ -63,9 +132,9 @@
 #insta-carousel{
   .carousel-indicators{
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -11.5rem;
+    // left: 50%;
+    // transform: translateX(-50%);
     text-align: center;
     margin-bottom: 0;
     
@@ -82,6 +151,11 @@
       &:after{
         content: '';
       }
+    }
+  }
+  .carousel-inner{
+    .item{
+      height: auto;
     }
   }
 }

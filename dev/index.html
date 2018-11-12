@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/styles.min.css?v=2018-09-26-3">
   <link rel="icon" href="./images/favicon.ico">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -22,8 +22,9 @@
 <body>
 
   <div class="wrap_main">
+
     <section class="rs_navigation">
-      <img src="./images/logo.png">
+      <img class="rs_navigation-logo" src="./images/logo.png">
       <ul class="nav-items">
         <li><a class="white" href="#">home</a></li>
         <li><a class="white" href="#">our story</a></li>
@@ -38,63 +39,43 @@
         <li><a class="white" href="#">TW</a></li>
       </ul>
     </section>
-    <section class="rs_banner">
-      <div id="banner-carousel" class="carousel slide" data-ride="carousel">
 
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <section class="rs_banner">
+      <div id="pv-carousel-4" class="carousel pv-carousel-4 slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators pv-carousel-4__indicators">
+          <li data-target="#pv-carousel-4" data-slide-to="0" class="active"></li>
+          <li data-target="#pv-carousel-4" data-slide-to="1"></li>
+          <li data-target="#pv-carousel-4" data-slide-to="2"></li>
         </ol>
 
-        <div class="carousel-inner" role="listbox">
+        <div class="pv-carousel-4__carousel-caption">
+          <h1>RUSLAN ADIPISICING</h1>
+          <p>Welcome to the home of RUSLAN. Amet consectetur adipisicing elit sed do eiu</p>
+        </div>
+        <div class="carousel-inner pv-carousel-4__carousel-inner">
           <div class="item active">
-            <img src="./images/banner.jpeg" alt="">
-            <div class="carousel-caption">
-              <div class="content content--alt content--carousel">
-                <div class="border">
-                  <h1>RUSLAN ADIPISICING</h1>
-                  <p>Welcome to the home of RUSLAN<br>
-                    Amet consectetur adipisicing elit sed do eiu</p>
-                </div>
-              </div>
-            </div>
+            <img src="./images/banner.jpeg" alt="" data-color="#0055b8">
           </div>
-          <div class="carousel-overlay"></div>
-
           <div class="item">
-            <img src="./images/drinks.jpg" alt="">
-            <div class="carousel-caption">
-              <div class="content content--alt content--carousel">
-                <div class="border">
-                  <h1>RUSLAN ADIPISICING</h1>
-                  <p>Welcome to the home of RUSLAN<br>
-                    Amet consectetur adipisicing elit sed do eiu</p>
-                </div>
-              </div>
-            </div>
+            <img src="./images/events.png" alt="" data-color="#0055b8">
           </div>
-
           <div class="item">
-            <img src="./images/7756d4b698b35e36e268f813e112569d.jpg" alt="">
-            <div class="carousel-caption">
-              <div class="content content--alt content--carousel">
-                <div class="border">
-                  <h1>RUSLAN ADIPISICING</h1>
-                  <p>Welcome to the home of RUSLAN<br>
-                    Amet consectetur adipisicing elit sed do eiu</p>
-                </div>
-              </div>
-            </div>
+            <img src="./images/drinks.jpg" alt="" data-color="#0055b8">
           </div>
-
         </div>
       </div>
+
+      <div class="rs_story-logo rs_banner-logo lateLoad"></div>
+      <img class="rs_banner-bottle1 lateLoad" id="bottleImg" src="./images/bottle-2.png">
+      <img class="rs_banner-glass1 lateLoad" id="drinksGlass" src="./images/cocktail-glass.png">
+      <img class="rs_banner-glass2 lateLoad" id="drinksGlass" src="./images/vodka-glass.png">
     </section>
 
-    <section class="content rs_story">
+    <section class="content content--flexCol rs_story">
       <div class="content-section text-left">
-        <h1 class="content-title white">RUSLAN Story</h1>
+        <h1 class="content-title white">RUSLAN STORY</h1>
+        <div class="hr hr--white hr--left"></div>
         <p class="content-desc content-desc--small white">Fusce vehicula dolor arcu, sit amet blandit dolor mollis <br>
           nec. Donec viverra
           eleifend lacus.</p>
@@ -105,25 +86,30 @@
         <a class="btn btn--dark">discover products</a>
       </div>
       <div class="rs_story-logo"></div>
-      <div class="rs_story-bottle"></div>
+      <img class="rs_story-bottle1" id="bottleImg" src="./images/bottle-2.png">
+      <img class="rs_story-bottle2" id="bottleImg" src="./images/bottle-3.png">
     </section>
 
-    <section class="content rs_products">
+    <section class="content content--flexCol rs_products">
       <div class="content-section text-right">
         <h1 class="content-title brand">RUSLAN PRODUCTS</h1>
+        <div class="hr hr--brand hr--right"></div>
         <p class="content-desc m-t-30 m-b-30">Fusce vehicula dolor arcu, sit amet blandit dolor mollis <br> nec. Donec
           viverra
           eleifend lacus.</p>
         <a class="btn btn--main">discover products</a>
       </div>
       <div class="rs_products--logo"></div>
+      <img class="rs_products-bottle1" id="bottleImg" src="./images/bottle-2.png">
+      <img class="rs_products-bottle2" id="bottleImg" src="./images/bottle-3.png">
     </section>
 
     <section class="rs_cocktails">
-      <div class="rs_cocktails-left">
-        <div class="content">
+      <div class="rs_cocktails-left content--flexCol">
+        <div class="content content--flexCol">
           <div class="rs_cocktails-big">
             <h1 class="content-title white">RUSLAN COCKTAILS</h1>
+            <div class="hr hr--white hr--left"></div>
             <p class="content-desc m-t-30 m-b-30 white">Be inspired to craft your own ingenious cocktails at home with
               our
               outstanding mixologist.</p>
@@ -136,14 +122,14 @@
           <span class="content-desc--medium white">Dry Vodka Martini</span>
         </div>
         <div class="bottom">
-          <span class="content-desc--medium white">Dry Vodka Martini</span>
+          <span class="content-desc--medium white text-right">Dry Vodka Martini</span>
         </div>
       </div>
     </section>
 
-    <section class="content content--alt rs_parties" style="background:url('./images/banner.jpeg')">
+    <section class="content content--alt content--flexCol rs_parties" style="background:url('./images/banner.jpeg')">
       <h1 class="content-title white text-center">RUSLAN PARTIES</h1>
-
+      <div class="hr hr--white hr--center"></div>
       <div class="rs_parties-content p-t-50">
         <div class="rs_parties-left">
           <p class="content-desc--xs white">15th Dec 2018</p>
@@ -155,66 +141,59 @@
       </div>
     </section>
 
-    <section class="content content--alt rs_insta text-center" style="background:url(../images/drinks.jpg)">
-      <h1 class="content-title white text-center">RUSLAN ON INSTAGRAM</h1>
+    <section class="rs_insta text-center">
+      <div class="content content--alt ">
 
-      <!-- <div class="rs_insta-content p-t-50">
-        <div class="insta-img" style="background:url(../images/insta-004.png)">
-          <div class="insta-overlay"></div>
-        </div>
-        <div class="insta-img" style="background:url(../images/insta-003.png)">
-          <div class="insta-overlay"></div>
-        </div>
-        <div class="insta-img" style="background:url(../images/insta-004.png)">
-          <div class="insta-overlay"></div>
-        </div>
-        <div class="insta-img" style="background:url(../images/insta-003.png)">
-          <div class="insta-overlay"></div>
-        </div>
-      </div> -->
+        <h1 class="content-title brand text-center">RUSLAN ON INSTAGRAM</h1>
+        <div class="hr hr--brand hr--center"></div>
 
-      <div id="insta-carousel" class="carousel slide" data-ride="carousel">
+        <div id="insta-carousel" class="carousel slide m-t-40" data-ride="carousel">
 
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
+          <ol class="carousel-indicators">
+            <li data-target="#insta-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#insta-carousel" data-slide-to="1"></li>
+            <li data-target="#insta-carousel" data-slide-to="2"></li>
+          </ol>
 
-        <div class="carousel-inner" role="listbox">
+          <div class="carousel-inner" role="listbox">
 
-          <div class="item active">
-            <div class="rs_insta-content p-t-50">
-              <div class="insta-img" style="background:url(../images/insta-004.png)">
-                <div class="insta-overlay"></div>
-              </div>
-              <div class="insta-img" style="background:url(../images/insta-003.png)">
-                <div class="insta-overlay"></div>
-              </div>
-              <div class="insta-img" style="background:url(../images/insta-004.png)">
-                <div class="insta-overlay"></div>
-              </div>
-              <div class="insta-img" style="background:url(../images/insta-003.png)">
-                <div class="insta-overlay"></div>
+            <div class="item active">
+              <div class="rs_insta-content \">
+                <div class="insta-img" style="background:url(../images/insta-004.png)">
+                  <div class="insta-overlay"></div>
+                </div>
+                <div class="insta-img" style="background:url(../images/insta-003.png)">
+                  <div class="insta-overlay"></div>
+                </div>
+                <div class="insta-img" style="background:url(../images/insta-004.png)">
+                  <div class="insta-overlay"></div>
+                </div>
+                <div class="insta-img" style="background:url(../images/insta-003.png)">
+                  <div class="insta-overlay"></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="item">
-            <div class="rs_insta-content p-t-50">
-              <div class="insta-img" style="background:url(../images/insta-004.png)">
-                <div class="insta-overlay"></div>
-              </div>
-              <div class="insta-img" style="background:url(../images/insta-003.png)">
-                <div class="insta-overlay"></div>
+            <div class="item">
+              <div class="rs_insta-content p-t-50">
+                <div class="insta-img" style="background:url(../images/insta-004.png)">
+                  <div class="insta-overlay"></div>
+                </div>
+                <div class="insta-img" style="background:url(../images/insta-003.png)">
+                  <div class="insta-overlay"></div>
+                </div>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
+
+        <a class="btn btn--main m-t-200">follow us</a>
       </div>
+      <img class="rs_insta-flakes" src="./images/flakes.png">
+      <img class="rs_insta-logo" src="./images/brand-bg.png">
+      <img class="rs_insta-drinks" src="./images/drinks-transparent.png">
 
-      <a class="btn btn--main m-t-100">follow us</a>
     </section>
 
     <section class="rs_footer">
