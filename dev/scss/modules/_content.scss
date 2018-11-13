@@ -26,6 +26,7 @@
   &-title{    
     letter-spacing: 3.5px;    
     letter-spacing: 3.5px;
+    display: inline-block;
     // margin-bottom: 5rem;
   }
   &-desc{    
@@ -57,7 +58,12 @@
   }
 }
 
+
 #bottleImg{
+  @media(max-width:1600px){
+    height: 60rem;;
+    width: auto;
+  }
   @include respond(tab-port){
     height: 45rem;  
     bottom: -3rem;
@@ -65,7 +71,7 @@
     transform: none;
   }  
   @include respond(phone){
-    height: 35rem;
+    height: 35rem;    
   }
   @include respond(phone-md){
     height: 30rem;
@@ -126,6 +132,7 @@
     li{
       display: inline-block;
       margin: 1.5rem;
+      background-image: url(../images/social-fill.png)
     }
   }
 }
@@ -160,7 +167,7 @@
   &-bottle1{
     position: absolute;
     width: 25rem;
-    bottom: -40rem;
+    bottom: -35rem;
     right: 19rem;
     opacity: .4;
     background-size: cover;
@@ -170,6 +177,10 @@
     overflow: hidden;
     -webkit-transform: rotateY(-40deg);
     transform: rotate(-30deg);
+
+    @media(max-width:1600px){
+      bottom: -22rem;      
+    }
 
     @include respond(tab-port){
       right: 12rem;
@@ -182,7 +193,7 @@
   &-bottle2{
     position: absolute;
     width: 15rem;
-    bottom: -30rem;
+    bottom: -25rem;
     right: 1rem;
     opacity: .4;
     background-size: cover;
@@ -192,6 +203,10 @@
     overflow: hidden;
     -webkit-transform: rotateY(-40deg);
     transform: rotate(-32deg);
+
+    @media(max-width:1600px){
+      bottom: -30rem;      
+    }
 
     @include respond(tab-port){
       right: 4rem;
@@ -208,10 +223,14 @@
 
   &-bottle1{
     position: absolute;
-    right: 20rem;
+    right: 17rem;
     z-index: 2;
     bottom: -10rem;
-    height:65rem;
+    height:75rem;
+
+    @media(max-width:1600px){
+      height:65rem;      
+    }
     
     @include respond(tab-port){
       right: 12rem;      
@@ -227,6 +246,11 @@
     z-index: 1;
     bottom: -10rem;
     height:35rem;
+
+    @media(max-width:1600px){
+      height:25rem;
+      right: 8rem;
+    }
     
     @include respond(tab-port){
       right: 3rem;      
@@ -240,10 +264,14 @@
   }
   &-glass2{
     position: absolute;
-    right: 32rem;
+    right: 29rem;
     z-index: 3;
     bottom: -10rem;
     height:26rem;
+
+    @media(max-width:1600px){
+      height:20rem;
+    }
 
     @include respond(tab-port){
       right: 20rem;      
@@ -258,11 +286,11 @@
   &-logo{
     width: 43rem !important;
     height: 38rem;
-    top: 50%;
+    top: 30% !important;
     z-index: 1;
-    right: 8rem;
-    opacity: .7;
-    transform: translateY(-50%);
+    right: 4rem;
+    opacity: .9;
+    transform: translateY(-30%);
   }
 }
 
@@ -432,6 +460,7 @@
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
+  padding: 10% 15%;
   
 
   @include respond(tab-port){
